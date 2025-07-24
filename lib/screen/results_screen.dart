@@ -12,10 +12,12 @@ class ResultsScreen extends StatelessWidget {
         alignment: Alignment.topCenter,
         child: Column(
           children: [
-            Padding(padding: EdgeInsetsGeometry.only(top: 54)),
-            AppText(
-              title: 'BMI CALCULATOR',
-              style: AppTextStyle.textFont17W400,
+            Padding(
+              padding: EdgeInsetsGeometry.only(top: 54),
+              child: AppText(
+                title: 'BMI CALCULATOR',
+                style: AppTextStyle.textFont17W400,
+              ),
             ),
           ],
         ),
