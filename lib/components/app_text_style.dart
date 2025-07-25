@@ -34,6 +34,12 @@ class AppTextStyle {
     fontWeight: FontWeight.w700,
     color: AppColorPath.white,
   );
+  static final TextStyle textFontB537W700 = TextStyle(
+    fontFamily: 'Inter-Bold',
+    fontSize: 57.39,
+    fontWeight: FontWeight.w700,
+    color: AppColorPath.lavender,
+  );
   static final TextStyle textFontM17W500 = TextStyle(
     fontFamily: 'Inter-Medium',
     fontSize: 17.6,
