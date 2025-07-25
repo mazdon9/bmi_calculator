@@ -1,4 +1,4 @@
-import 'package:bmi_calculator/screen/splash_screen.dart';
+import 'package:bmi_calculator/routes/app_routes.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -17,7 +17,8 @@ class BmiCalculator extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: SplashScreen(),
+      initialRoute: AppRoutes.splashScreenRoute,
+      routes: AppRoutes.routes,
     );
   }
 }

@@ -9,6 +9,7 @@ class ResultsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    int weight = 78;
     return Scaffold(
       body: SingleChildScrollView(
         child: Align(
@@ -16,7 +17,7 @@ class ResultsScreen extends StatelessWidget {
           child: Column(
             children: [
               Padding(
-                padding: EdgeInsetsGeometry.only(top: 54),
+                padding: EdgeInsets.only(top: 54),
                 child: AppText(
                   title: 'BMI CALCULATOR',
                   style: AppTextStyle.textFont17W400,
@@ -55,8 +56,9 @@ class ResultsScreen extends StatelessWidget {
                           ValueListenableBuilder<int>(
                             valueListenable: age,
                             builder: (context, value, _) {
+                              String title = value.toString();
                               return AppText(
-                                title: value.toString(),
+                                title: title,
                                 style: AppTextStyle.textFontB537W700,
                               );
                             },
@@ -68,8 +70,9 @@ class ResultsScreen extends StatelessWidget {
                               Padding(
                                 padding: EdgeInsets.only(left: 28),
                                 child: CustomIconButton(
-                                  icon: Icons
-                                      .remove, // Replace with the desired icon
+                                  icon:
+                                      Icons
+                                          .remove, // Replace with the desired icon
                                   onPressed: () {
                                     if (age.value > 0) {
                                       age.value--;
@@ -81,8 +84,9 @@ class ResultsScreen extends StatelessWidget {
                               Padding(
                                 padding: EdgeInsets.only(right: 28),
                                 child: CustomIconButton(
-                                  icon: Icons
-                                      .add, // Replace with the desired icon
+                                  icon:
+                                      Icons
+                                          .add, // Replace with the desired icon
                                   onPressed: () {
                                     age.value++;
                                   },
@@ -113,52 +117,54 @@ class ResultsScreen extends StatelessWidget {
                     ),
                     child: Padding(
                       padding: EdgeInsets.only(top: 27),
-                      child: Column(
-                        children: [
-                          AppText(
-                            title: 'Weight',
-                            style: AppTextStyle.textFont17W400,
-                          ),
-                          SizedBox(height: 3),
-                          ValueListenableBuilder<int>(
-                            valueListenable: weight,
-                            builder: (context, value, _) {
-                              return AppText(
-                                title: value.toString(),
-                                style: AppTextStyle.textFontB537W700,
-                              );
-                            },
-                          ),
-                          SizedBox(height: 7),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      child: StatefulBuilder(
+                        builder: (context, innerSetState) {
+                          return Column(
                             children: [
-                              Padding(
-                                padding: EdgeInsets.only(left: 28),
-                                child: CustomIconButton(
-                                  icon: Icons
-                                      .remove, // Replace with the desired icon
-                                  onPressed: () {
-                                    if (weight.value > 0) {
-                                      weight.value--;
-                                    }
-                                  },
-                                ),
+                              AppText(
+                                title: 'Weight',
+                                style: AppTextStyle.textFont17W400,
                               ),
+                              SizedBox(height: 3),
+                              AppText(
+                                title: weight.toString(),
+                                style: AppTextStyle.textFontB537W700,
+                              ),
+                              SizedBox(height: 7),
+                              Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Padding(
+                                    padding: EdgeInsets.only(left: 28),
+                                    child: CustomIconButton(
+                                      icon: Icons.remove,
+                                      onPressed: () {
+                                        if (weight > 0) {
+                                          innerSetState(() {
+                                            weight--;
+                                          });
+                                        }
+                                      },
+                                    ),
+                                  ),
 
-                              Padding(
-                                padding: EdgeInsets.only(right: 28),
-                                child: CustomIconButton(
-                                  icon: Icons
-                                      .add, // Replace with the desired icon
-                                  onPressed: () {
-                                    weight.value++;
-                                  },
-                                ),
+                                  Padding(
+                                    padding: EdgeInsets.only(right: 28),
+                                    child: CustomIconButton(
+                                      icon: Icons.add,
+                                      onPressed: () {
+                                        innerSetState(() {
+                                          weight++;
+                                        });
+                                      },
+                                    ),
+                                  ),
+                                ],
                               ),
                             ],
-                          ),
-                        ],
+                          );
+                        },
                       ),
                     ),
                   ),
