@@ -38,7 +38,7 @@ class CalculatorScreen extends StatelessWidget {
                 ],
               ),
               SizedBox(height: 23),
-              // HEIGHT SLIDER BOX
+              // HEIGHT (CM) SLIDER BOX
               SliderBox(title: "Height (CM)", valueNotifier: height),
               SizedBox(height: 23),
               // GEMDER SELECTION BOX
