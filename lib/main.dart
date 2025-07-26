@@ -17,7 +17,7 @@ class BmiCalculator extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      initialRoute: AppRoutes.CalculartorScreenRoute,
+      initialRoute: AppRoutes.SpashScreenRouter,
       routes: AppRoutes.routes,
     );
   }

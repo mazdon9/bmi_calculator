@@ -35,3 +35,40 @@ class AppButton extends StatelessWidget {
     );
   }
 }
+
+class CalculatorSaveButton extends StatelessWidget {
+  final String content;
+  final VoidCallback onTap;
+
+  const CalculatorSaveButton({
+    required this.content,
+    required this.onTap,
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    final screenWidth = MediaQuery.of(context).size.width;
+
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+        width: screenWidth - 31 - 30,
+        height: 75,
+        decoration: BoxDecoration(
+          color: AppColorPath.lavender,
+          borderRadius: BorderRadius.circular(59),
+        ),
+        child: Center(
+          child: AppText(
+            title: content,
+            style: AppTextStyle.textFontM17W500.copyWith(
+              color: AppColorPath.white,
+              fontSize: 17.6,
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}

@@ -1,12 +1,15 @@
 import 'package:bmi_calculator/screen/calculator_screen.dart';
+import 'package:bmi_calculator/screen/results_screen.dart';
 import 'package:bmi_calculator/screen/splash_screen.dart';
 
 class AppRoutes {
-  static final String CalculartorScreenRoute = 'splash-screen';
-  static final String resultScreenRoute = 'result-screen';
+  static final String SpashScreenRouter = 'splash-screen';
+  static final String CalculatorScreenRoute = 'calculator-screen';
+  static final String ResultScreenRoute = 'results-screen';
 
   static final routes = {
-    CalculartorScreenRoute: (context) => CalculartorScreen(),
-    resultScreenRoute: (context) => ResultsScreen(),
+    SpashScreenRouter: (context) => SplashScreen(),
+    CalculatorScreenRoute: (context) => CalculatorScreen(),
+    ResultScreenRoute: (context) => ResultSreen(),
   };
 }

@@ -6,8 +6,8 @@ import 'package:bmi_calculator/contants/app_images_path.dart';
 import 'package:bmi_calculator/routes/app_routes.dart';
 import 'package:flutter/material.dart';
 
-class CalculartorScreen extends StatelessWidget {
-  const CalculartorScreen({super.key});
+class SplashScreen extends StatelessWidget {
+  const SplashScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -43,7 +43,7 @@ class CalculartorScreen extends StatelessWidget {
           AppButton(
             content: 'Get Started',
             onTap: () {
-              Navigator.pushNamed(context, AppRoutes.resultScreenRoute);
+              Navigator.pushNamed(context, AppRoutes.CalculatorScreenRoute);
             },
           ),
           Spacer(),

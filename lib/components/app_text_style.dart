@@ -27,6 +27,12 @@ class AppTextStyle {
     fontWeight: FontWeight.w400,
     color: AppColorPath.darkBlue,
   );
+  static final TextStyle textFont13W400 = TextStyle(
+    fontFamily: 'Inter-regular',
+    fontSize: 13,
+    fontWeight: FontWeight.w400,
+    color: AppColorPath.darkBlue,
+  );
 
   static final TextStyle textFontI25W700 = TextStyle(
     fontFamily: 'Inter-Bold',
