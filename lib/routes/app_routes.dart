@@ -1,4 +1,4 @@
-import 'package:bmi_calculator/screen/results_screen.dart';
+import 'package:bmi_calculator/screen/calculator_screen.dart';
 import 'package:bmi_calculator/screen/splash_screen.dart';
 
 class AppRoutes {
