@@ -6,8 +6,8 @@ import 'package:bmi_calculator/contants/app_images_path.dart';
 import 'package:bmi_calculator/routes/app_routes.dart';
 import 'package:flutter/material.dart';
 
-class SplashScreen extends StatelessWidget {
-  const SplashScreen({super.key});
+class CalculartorScreen extends StatelessWidget {
+  const CalculartorScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
