@@ -10,7 +10,7 @@ class ResultsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SingleChildScrollView(
+      body: SafeArea(
         child: Align(
           alignment: Alignment.topCenter,
           child: Column(
