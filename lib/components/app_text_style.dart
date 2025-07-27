@@ -33,6 +33,18 @@ class AppTextStyle {
     fontWeight: FontWeight.w400,
     color: AppColorPath.darkBlue,
   );
+  static final TextStyle textFont27W400 = TextStyle(
+    fontFamily: 'Inter-regular',
+    fontSize: 27,
+    fontWeight: FontWeight.w400,
+    color: AppColorPath.darkBlue,
+  );
+  static final TextStyle textFont32W400 = TextStyle(
+    fontFamily: 'Inter-regular',
+    fontSize: 32,
+    fontWeight: FontWeight.w400,
+    color: AppColorPath.darkBlue,
+  );
 
   static final TextStyle textFontI25W700 = TextStyle(
     fontFamily: 'Inter-Bold',
@@ -46,9 +58,33 @@ class AppTextStyle {
     fontWeight: FontWeight.w700,
     color: AppColorPath.lavender,
   );
+  static final TextStyle textFontB140W700 = TextStyle(
+    fontFamily: 'Inter-Bold',
+    fontSize: 140,
+    fontWeight: FontWeight.w700,
+    color: AppColorPath.lavender,
+  );
   static final TextStyle textFontM17W500 = TextStyle(
     fontFamily: 'Inter-Medium',
     fontSize: 17.6,
+    fontWeight: FontWeight.w500,
+    color: AppColorPath.darkBlue,
+  );
+  static final TextStyle textFontM13W500 = TextStyle(
+    fontFamily: 'Inter-Medium',
+    fontSize: 13,
+    fontWeight: FontWeight.w500,
+    color: AppColorPath.darkBlue,
+  );
+  static final TextStyle textFontM42W500 = TextStyle(
+    fontFamily: 'Inter-Medium',
+    fontSize: 42,
+    fontWeight: FontWeight.w500,
+    color: AppColorPath.lavender,
+  );
+  static final TextStyle textFontM24W500 = TextStyle(
+    fontFamily: 'Inter-Medium',
+    fontSize: 24,
     fontWeight: FontWeight.w500,
     color: AppColorPath.darkBlue,
   );
