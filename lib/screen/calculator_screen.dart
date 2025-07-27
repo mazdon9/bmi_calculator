@@ -17,7 +17,6 @@ class CalculatorScreen extends StatelessWidget {
 
     return Scaffold(
       body: Column(
-        // mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Padding(
             padding: EdgeInsets.only(top: 54),
