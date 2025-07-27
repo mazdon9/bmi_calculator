@@ -30,7 +30,6 @@ class ResultSreen extends StatelessWidget {
             Container(
               padding: EdgeInsets.only(bottom: 24),
               width: (333 / 393) * MediaQuery.of(context).size.width,
-              // height: 333,
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(20),
