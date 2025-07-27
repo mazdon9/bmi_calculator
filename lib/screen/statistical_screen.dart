@@ -20,7 +20,7 @@ class StatisticalScreen extends StatelessWidget {
             borderRadius: BorderRadius.circular(20),
             boxShadow: [
               BoxShadow(
-                color: Colors.black.withValues(alpha: 0.1),
+                color: Colors.black.withValues(alpha: 0.5),
                 blurRadius: 10,
                 offset: Offset(0, 5),
               ),
@@ -30,7 +30,7 @@ class StatisticalScreen extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
 
             children: [
-              Text('Statistical Screen', style: AppTextStyle.textFontM42W500),
+              Text('STATISTICAL', style: AppTextStyle.textFontM42W500),
               SizedBox(height: 20),
               Text(
                 'Gender: ${gender.value ? 'Female' : 'Male'}',
