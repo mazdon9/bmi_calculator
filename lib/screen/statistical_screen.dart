@@ -9,6 +9,7 @@ class StatisticalScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColorPath.lavender,
       body: Center(
         child: Container(
           padding: EdgeInsets.all(20),
@@ -36,20 +37,20 @@ class StatisticalScreen extends StatelessWidget {
                 style: AppTextStyle.textFontM24W500,
               ),
               SizedBox(height: 20),
-              Text('Age: ${age.value}', style: AppTextStyle.textFontM24W500),
+              Text('AGE: ${age.value}', style: AppTextStyle.textFontM24W500),
               SizedBox(height: 20),
               Text(
-                'Weight: ${weight.value} KG',
+                'WEIGHT: ${weight.value} KG',
                 style: AppTextStyle.textFontM24W500,
               ),
               SizedBox(height: 20),
               Text(
-                'Height: ${(height.value) / 100} M',
+                'HEIGHT: ${(height.value) / 100} M',
                 style: AppTextStyle.textFontM24W500,
               ),
               SizedBox(height: 20),
               Text(
-                'Classification: ${getBmiClassification()}',
+                'CLASSIFICATION: ${getBmiClassification()}',
                 style: AppTextStyle.textFontM24W500,
               ),
             ],
