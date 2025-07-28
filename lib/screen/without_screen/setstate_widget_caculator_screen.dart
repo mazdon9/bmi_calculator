@@ -95,7 +95,6 @@ class _CalculatorScreenSetStateState extends State<CalculatorScreenSetState> {
               );
             },
           ),
-          Spacer(),
         ],
       ),
     );
