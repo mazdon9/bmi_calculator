@@ -34,7 +34,7 @@ class _CalculatorScreenSetStateState extends State<CalculatorScreenSetState> {
               style: AppTextStyle.textFont17W400,
             ),
           ),
-          SizedBox(height: 39),
+          SizedBox(height: 38),
           Row(
             children: [
               CounterBox(
