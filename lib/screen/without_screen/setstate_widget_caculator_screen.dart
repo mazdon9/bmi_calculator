@@ -71,8 +71,8 @@ class _CalculatorScreenSetStateState extends State<CalculatorScreenSetState> {
               ],
             ),
             child: GenderOption(
-              label: 'Female',
-              selected: !isMale,
+              title: 'Female',
+              gender: !isMale,
               onTap: () {
                 setState(() => isMale = !isMale);
               },
@@ -242,14 +242,14 @@ class SliderBox extends StatelessWidget {
 }
 
 class GenderOption extends StatelessWidget {
-  final String label;
-  final bool selected;
+  final String title;
+  final bool gender;
   final VoidCallback onTap;
 
   const GenderOption({
     super.key,
-    required this.label,
-    required this.selected,
+    required this.title,
+    required this.gender,
     required this.onTap,
   });
 
@@ -264,7 +264,7 @@ class GenderOption extends StatelessWidget {
             title: "Male",
             style: AppTextStyle.textFont17W400.copyWith(
               color:
-                  selected
+                  gender
                       ? AppColorPath.lavender.withAlpha(100)
                       : AppColorPath.darkBlue,
             ),
@@ -274,7 +274,7 @@ class GenderOption extends StatelessWidget {
             width: 60,
             height: 30,
             child: Switch(
-              value: selected,
+              value: gender,
               activeColor: AppColorPath.darkBlue,
               inactiveThumbColor: AppColorPath.lavender,
               onChanged: (_) => onTap(),
@@ -285,7 +285,7 @@ class GenderOption extends StatelessWidget {
             title: "Female",
             style: AppTextStyle.textFont17W400.copyWith(
               color:
-                  !selected
+                  !gender
                       ? AppColorPath.lavender.withAlpha(100)
                       : AppColorPath.darkBlue,
             ),
