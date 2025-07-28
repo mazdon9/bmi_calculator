@@ -34,7 +34,7 @@ class CalculatorWithStatefulBuilder extends StatelessWidget {
               ),
               ElevatedButton(
                 onPressed: () {
-                  print("BMI: $bmi");
+                  debugPrint("BMI: $bmi");
                   // Navigator.push...
                 },
                 child: Text("Calculate BMI"),

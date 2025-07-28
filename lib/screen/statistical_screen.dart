@@ -2,8 +2,8 @@ import 'package:bmi_calculator/components/app_button.dart';
 import 'package:bmi_calculator/components/app_text_style.dart';
 import 'package:bmi_calculator/contants/app_color_path.dart';
 import 'package:bmi_calculator/contants/app_data.dart';
-import 'package:bmi_calculator/screen/without_screen/setstate_widget_caculator_screen.dart';
-import 'package:bmi_calculator/screen/without_screen/statefulbuilder_widget_caculator_screen.dart';
+import 'package:bmi_calculator/screen/set_state/setstate_widget_caculator_screen.dart';
+import 'package:bmi_calculator/screen/stateful_builder/statefulbuilder_widget_caculator_screen.dart';
 import 'package:flutter/material.dart';
 
 class StatisticalScreen extends StatelessWidget {
@@ -11,6 +11,13 @@ class StatisticalScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final args =
+        ModalRoute.of(context)!.settings.arguments as Map<String, dynamic>;
+
+    final age = args['age'];
+    final gender = args['gender'];
+    final weight = args['weight'];
+    final height = args['height'];
     return Scaffold(
       backgroundColor: AppColorPath.lavender,
       body: Center(
@@ -38,28 +45,22 @@ class StatisticalScreen extends StatelessWidget {
                 children: [
                   Text('STATISTICAL', style: AppTextStyle.textFontM42W500),
                   SizedBox(height: 20),
+                  Text('Gender: $gender', style: AppTextStyle.textFontM24W500),
+                  SizedBox(height: 20),
+                  Text('AGE: $age', style: AppTextStyle.textFontM24W500),
+                  SizedBox(height: 20),
                   Text(
-                    'Gender: ${gender.value ? 'Female' : 'Male'}',
+                    'WEIGHT: $weight KG',
                     style: AppTextStyle.textFontM24W500,
                   ),
                   SizedBox(height: 20),
                   Text(
-                    'AGE: ${age.value}',
+                    'HEIGHT: $height M',
                     style: AppTextStyle.textFontM24W500,
                   ),
                   SizedBox(height: 20),
                   Text(
-                    'WEIGHT: ${weight.value} KG',
-                    style: AppTextStyle.textFontM24W500,
-                  ),
-                  SizedBox(height: 20),
-                  Text(
-                    'HEIGHT: ${(height.value) / 100} M',
-                    style: AppTextStyle.textFontM24W500,
-                  ),
-                  SizedBox(height: 20),
-                  Text(
-                    'CLASSIFICATION: ${getBmiClassification()}',
+                    'CLASSIFICATION: ${getBmiClassification(bmiIndex: bmiIndex)}',
                     style: AppTextStyle.textFontM24W500,
                   ),
                 ],
@@ -97,5 +98,18 @@ class StatisticalScreen extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  String getBmiClassification({required double bmiIndex}) {
+    final bmi = bmiIndex;
+    if (bmi < 18.5) {
+      return 'UNDERWWEIGHT';
+    } else if (bmi >= 18.5 && bmi < 24.9) {
+      return 'NORMAL WEIGHT';
+    } else if (bmi >= 25 && bmi < 29.9) {
+      return 'OVERWEIGHT';
+    } else {
+      return 'OBESITY';
+    }
   }
 }

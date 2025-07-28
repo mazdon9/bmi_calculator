@@ -6,64 +6,34 @@ import 'package:flutter/material.dart';
 class AppButton extends StatelessWidget {
   final String content;
   final VoidCallback onTap;
+  final Color? backgroundColor;
+  final Color? textColor;
 
-  const AppButton({required this.content, required this.onTap, super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    final screenWidth = MediaQuery.of(context).size.width;
-
-    return GestureDetector(
-      onTap: onTap,
-      child: Container(
-        width: screenWidth - 31 - 30,
-        height: 75,
-        decoration: BoxDecoration(
-          color: AppColorPath.white,
-          borderRadius: BorderRadius.circular(59),
-        ),
-        child: Center(
-          child: AppText(
-            title: content,
-            style: AppTextStyle.textFontM17W500.copyWith(
-              color: AppColorPath.darkBlue,
-              fontSize: 17.6,
-            ),
-          ),
-        ),
-      ),
-    );
-  }
-}
-
-class CalculatorSaveButton extends StatelessWidget {
-  final String content;
-  final VoidCallback onTap;
-
-  const CalculatorSaveButton({
+  const AppButton({
     required this.content,
     required this.onTap,
+    this.backgroundColor,
+    this.textColor,
     super.key,
   });
 
   @override
   Widget build(BuildContext context) {
     final screenWidth = MediaQuery.of(context).size.width;
-
     return GestureDetector(
       onTap: onTap,
       child: Container(
         width: screenWidth - 31 - 30,
         height: 75,
         decoration: BoxDecoration(
-          color: AppColorPath.lavender,
+          color: backgroundColor ?? AppColorPath.white,
           borderRadius: BorderRadius.circular(59),
         ),
         child: Center(
           child: AppText(
             title: content,
             style: AppTextStyle.textFontM17W500.copyWith(
-              color: AppColorPath.white,
+              color: textColor ?? AppColorPath.darkBlue,
               fontSize: 17.6,
             ),
           ),

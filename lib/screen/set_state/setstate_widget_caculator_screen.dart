@@ -80,12 +80,14 @@ class _CalculatorScreenSetStateState extends State<CalculatorScreenSetState> {
           ),
 
           SizedBox(height: 31),
-          CalculatorSaveButton(
+          AppButton(
             content: 'Calculate BMI',
+            textColor: AppColorPath.white,
+            backgroundColor: AppColorPath.lavender,
             onTap: () {
               Navigator.pushNamed(
                 context,
-                AppRoutes.ResultScreenRoute,
+                AppRoutes.resultScreenRoute,
                 arguments: {
                   'age': age,
                   'weight': weight,

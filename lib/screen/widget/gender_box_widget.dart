@@ -4,8 +4,8 @@ import 'package:bmi_calculator/contants/app_color_path.dart';
 import 'package:bmi_calculator/contants/app_data.dart';
 import 'package:flutter/material.dart';
 
-class GenderBoxCalculatorScreenWidget extends StatelessWidget {
-  const GenderBoxCalculatorScreenWidget({super.key});
+class GenderBoxWidget extends StatelessWidget {
+  const GenderBoxWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -39,6 +39,7 @@ class GenderBoxCalculatorScreenWidget extends StatelessWidget {
                       activeColor: AppColorPath.darkBlue,
                       onChanged: (value) {
                         gender.value = value;
+                        print(gender.value);
                       },
                     ),
                   ),

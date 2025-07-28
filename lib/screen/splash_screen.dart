@@ -43,7 +43,7 @@ class SplashScreen extends StatelessWidget {
           AppButton(
             content: 'Get Started',
             onTap: () {
-              Navigator.pushNamed(context, AppRoutes.CalculatorScreenRoute);
+              Navigator.pushNamed(context, AppRoutes.calculatorScreenRoute);
             },
           ),
           Spacer(),
