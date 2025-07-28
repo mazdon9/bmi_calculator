@@ -1,6 +1,7 @@
 import 'package:bmi_calculator/components/app_button.dart';
 import 'package:bmi_calculator/components/app_text.dart';
 import 'package:bmi_calculator/components/app_text_style.dart';
+import 'package:bmi_calculator/contants/app_color_path.dart';
 import 'package:bmi_calculator/contants/app_data.dart';
 import 'package:bmi_calculator/routes/app_routes.dart';
 import 'package:flutter/material.dart';
@@ -31,7 +32,7 @@ class ResultSreen extends StatelessWidget {
               padding: EdgeInsets.only(bottom: 24),
               width: (333 / 393) * MediaQuery.of(context).size.width,
               decoration: BoxDecoration(
-                color: Colors.white,
+                color: AppColorPath.white,
                 borderRadius: BorderRadius.circular(20),
                 boxShadow: [
                   BoxShadow(
